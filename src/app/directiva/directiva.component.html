@@ -1,0 +1,13 @@
+<button type="button" (click)="available = setAvailable()" class="btn btn-primary my-3">
+  {{(available==true)? 'Ocultar' : 'Mostrar'}}
+</button>
+<div class="card">
+  <div class="card-header">
+    List of courses
+  </div>
+  <ul class="list-group" *ngIf="available = true">
+    <li class="list-group-item" *ngFor="let course of listCourse">
+      {{course}}
+    </li>
+  </ul>
+</div>
